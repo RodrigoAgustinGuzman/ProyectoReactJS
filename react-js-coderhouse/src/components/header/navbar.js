@@ -1,6 +1,8 @@
 import React from 'react'
 import logo from "../../imagenes/store.png"
 import "./navbar.css"
+import CartWidget from './CartWidget/CartWidget'
+
 const navbar = () => {
   return (
     <header>
@@ -11,7 +13,9 @@ const navbar = () => {
         <a href='#h'>Productos</a>
         <a href='#h'>Nosotros</a>
      </nav>
-     <img src="" alt="carrito" />
+     <div className='carrito' >
+     <CartWidget/>
+     </div>
     </header>
   )
 }
