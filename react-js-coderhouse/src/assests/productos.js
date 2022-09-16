@@ -1,0 +1,47 @@
+export const Productos = [
+{
+id:1,
+image: "https://cdn.shopify.com/s/files/1/0016/1061/2806/products/82d9b0a2-34c6-4372-85aa-690f02bf133d_740x.jpg?v=1652793630",
+product:"Camiseta Real Madrid titular 22/23",
+categoria: "Camisetas internacionales",
+description: "",
+price: 14000,
+stock: 10,
+},
+{
+id:2,
+image: "https://cdn.shopify.com/s/files/1/0016/1061/2806/products/am-kh02201_51119899-0c76-458a-aa66-feabfdf99c19_1024x1024@2x.jpg?v=1651174948",
+product: "Camiseta AC Milan titular",
+categoria: "Hot Sale",
+description:"",
+price: 13000,
+stock: 15,
+},
+{
+id:3,
+image: "https://cdn.shopify.com/s/files/1/0016/1061/2806/products/psg2122_740x.jpg?v=1622474465",
+product:"Camiseta PSG titular 21/22",
+categoria: "Camisetas temporada 21/22 ",
+description: "",
+price: 13000,
+stock: 14,
+},
+{
+id:4,
+image:"https://cdn.shopify.com/s/files/1/0016/1061/2806/products/arsenal-2022-23-adidas-home-kit-10_1024x1024@2x.jpg?v=1653311155",
+product: "Camiseta Arsenal titular 22/23",
+categoria: "Camisetas internacionales",
+description:"",
+price: 14000,
+stock: 11,
+},
+{
+id:5,
+image:"https://cdn.shopify.com/s/files/1/0016/1061/2806/products/A13340_8e5e9fa6-21ec-4a2f-bc4b-a5e66ce9f26a_1024x1024@2x.jpg?v=1652898485",
+product:"Camiseta Liverpool 1984",
+categoria:"Camisetas Retro",
+description:"",
+price: 13000,
+stock: 15,
+}
+]
