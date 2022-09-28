@@ -7,7 +7,7 @@ const ItemDetailContainer = () => {
   const [listaProductos, setListaProductos] = useState ({})
 
   useEffect (()=>{
-    customFetch(1).then (res =>setListaProductos (res))
+    customFetch(1).then (res =>setListaProductos (res));
       
      }, [])
     
