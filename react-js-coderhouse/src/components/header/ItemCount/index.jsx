@@ -10,7 +10,7 @@ const increase = () => count < stock && setCount(count + 1)
 const decrease = () => count > initial && setCount (count - 1)
 
   return (
-    <div>
+    <div  style={{display: 'flex', jutifyContent:'center'}}>
       <button onClick={decrease} >-</button>
        {count}
       <button onClick={increase}>+</button>
