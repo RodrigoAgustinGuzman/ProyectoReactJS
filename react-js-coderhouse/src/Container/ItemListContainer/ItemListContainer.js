@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react'
 import ItemList from '../../components/header/ItemList'
 import {Productos} from '../../assests/productos'
 import {customFetch} from '../../utils/customsfetch'
+import { CircularProgress } from "@mui/material";
 
 
 const ItemListContainer = ({greeting}) => {
 
   const [listaProductos, setListaProductos] = useState ([])
   const [loading, setLoading] = useState (true)
+  
 
   useEffect (()=>{
    customFetch(Productos)

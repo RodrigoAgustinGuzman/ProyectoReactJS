@@ -1,11 +1,13 @@
 const ItemDetail = ({Producto}) => {
   return (
     <div>
-          <p>{Producto.id}</p>
+          <p>{Producto.product}</p>
           <img src={Producto.image} alt="camisetas"/> 
-          <h3>${Producto.price}</h3>
+          <p>{Producto.description}</p>
+          <p>${Producto.price}</p>
           <button>Ver detalle</button>
-        </div>
+      </div>
+        
       )
 }
 

@@ -5,23 +5,18 @@ align-items: center;
 background-color: rgb(250, 1, 1);
 }
 
-a {
-    text-decoration: none;
-    padding: 10px;
-}
-
 img{
-width: 10%;
-}
-
+    width: 10%;
+    }
+    
 h1{
 font-size: 2rem;
 font-family: sans-serif;
-
-}
-
+    
+    }
+    
 .carrito {
-
+    
 width: 15%;
-
-}
+    
+    }

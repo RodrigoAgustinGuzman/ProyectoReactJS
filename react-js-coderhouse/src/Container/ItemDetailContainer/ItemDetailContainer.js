@@ -1,16 +1,16 @@
 import React, {useEffect, useState} from 'react'
 import { customFetch } from '../../utils/customsfetch'
 import ItemDetail from '../../components/ItemDetail/ItemDetail'
-import Item from '../../components/header/Item'
+import { Productos } from '../../assests/productos'
 
 const ItemDetailContainer = () => {
   const [listaProductos, setlistaProductos] = useState ({})
+
   useEffect (()=>{
-    customFetch(2).then (res =>setlistaProductos (res));
+    customFetch().then (res =>setlistaProductos (res));
   }, [])
-  
     return (
-      <ItemDetail Producto = {listaProductos}/>
+      <ItemDetail Producto = {Productos[0]}/>
     )
   }
 

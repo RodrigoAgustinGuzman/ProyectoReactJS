@@ -10,7 +10,7 @@ const mensaje = "Bienvenidos a nuestra pagina "
 const App = () =>{
   return (
     <>
-        <NavBar/>
+    <NavBar/>
     <Routes>
         <Route path='/' element={<ItemListContainer />} />
         <Route path='/detail' element={<ItemDetailContainer greeting={mensaje} />} />
