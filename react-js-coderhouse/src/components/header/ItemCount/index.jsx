@@ -14,7 +14,7 @@ const decrease = () => count > initial && setCount (count - 1)
       <button onClick={decrease} >-</button>
        {count}
       <button onClick={increase}>+</button>
-      <button onClick={onAdd} >Agregar al carrito</button>
+      <button onClick={ () => onAdd(count)}>Agregar al carrito</button>
     </div>
   )
 }
