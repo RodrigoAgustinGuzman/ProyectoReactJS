@@ -14,7 +14,7 @@ const onAdd = (cantidad,) => {
           setGoToCart(true);
           addProduct(Producto, cantidad);
   }
-console.log(cart)
+
   return (
     <div>
           <Link to="/">
