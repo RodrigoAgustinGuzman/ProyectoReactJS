@@ -32,10 +32,10 @@ const CartProvider = ({children}) => {
    const removeProduct = (id) => setCart (cart.filter(producto => producto.id !== id));
    
    const totalPrice = () => {
-    return cart.reduce((acc, product) => acc += (product.price * product.cantidad), 0)
+    return cart.reduce((acc, Producto) => acc += (Producto.price * Producto.cantidad), 0)
    }
    const totalCantidad = () => {
-    return cart.reduce((acc, product) => acc += product.cantidad, 0)
+    return cart.reduce((acc, Producto) => acc += Producto.cantidad, 0)
    }
 
   return (

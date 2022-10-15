@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useCartContext } from '../../../context/CartContext';
 import ItemCart from '../ItemCart/ItemCart';
 
-const cart = () => {
+const Cart = () => {
 
 const { cart, totalPrice } = useCartContext();
 
@@ -19,8 +19,9 @@ const { cart, totalPrice } = useCartContext();
   return (
     <div>
       {cart.map(Producto => <ItemCart key={Producto.id} product={Producto}/>)}
+      <p>Total: {totalPrice ()}</p>
     </div>
   )
 }
 
-export default cart
+export default Cart
