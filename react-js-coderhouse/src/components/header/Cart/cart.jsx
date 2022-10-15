@@ -18,7 +18,7 @@ const { cart, totalPrice } = useCartContext();
 
   return (
     <div>
-      {cart.map(product => <ItemCart key={Producto.id} product={Producto}/>)}
+      {cart.map(Producto => <ItemCart key={Producto.id} product={Producto}/>)}
     </div>
   )
 }
