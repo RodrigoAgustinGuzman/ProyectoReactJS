@@ -3,6 +3,7 @@ import ItemList from '../../components/header/ItemList'
 import {Productos} from '../../assests/productos'
 import {customFetch} from '../../utils/customsfetch'
 import { CircularProgress } from "@mui/material";
+import { useParams } from 'react-router-dom';
 
 
 const ItemListContainer = ({greeting}) => {
@@ -10,13 +11,14 @@ const ItemListContainer = ({greeting}) => {
   const [listaProductos, setListaProductos] = useState ([])
   const [loading, setLoading] = useState (true)
   
+  const { categoria } = useParams();
 
   useEffect (()=>{
-   customFetch(Productos)
+   customFetch(Productos, '', categoria)
        .then(res=> {
         setLoading (false)
         setListaProductos(res)})
-    }, [])
+    }, [categoria])
   
   return (
     <>

@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React from 'react'
 import './estiloItem.css'
 import { Link } from 'react-router-dom'
 
@@ -10,7 +10,7 @@ const Item = ({producto}) => {
          <p>{producto.product}</p>
        <img src={producto.image} alt="camisetas"/> 
        <p>${producto.price}</p>
-       <Link to='detail'><button>Ver detalle</button></Link>
+       <Link to= {`/detail/${producto.id}`} ><button>Ver detalle</button></Link>
      </div>
      </div>
     )
