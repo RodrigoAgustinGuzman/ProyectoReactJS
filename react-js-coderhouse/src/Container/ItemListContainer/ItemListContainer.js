@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ItemList from '../../components/header/ItemList'
-import {Productos} from '../../assests/productos'
-import {customFetch} from '../../utils/customsfetch'
+import{ query, where, collection, getDocs } from 'firebase/firestore'
+import {db} from '../../Firebase/Config'
 import { CircularProgress } from "@mui/material";
 import { useParams } from 'react-router-dom';
 
@@ -14,10 +14,25 @@ const ItemListContainer = ({greeting}) => {
   const { categoria } = useParams();
 
   useEffect (()=>{
-   customFetch(Productos, '', categoria)
-       .then(res=> {
-        setLoading (false)
-        setListaProductos(res)})
+    const productsCollection = collection(db, 'productos'); //se crea la coleccion
+        const q = query(productsCollection, where('categoria', '==', categoria || null));
+
+        getDocs(categoria ? q : productsCollection)
+            .then((data) => {
+                const list = data.docs.map((product) => {
+                    return {
+                        ...product.data(),
+                        id: product.id
+                    }
+                })
+                setListaProductos(list);
+            })
+            .catch((e) => {
+                console.log(e);
+            })
+            .finally(() => {
+                setLoading(false);
+            });
     }, [categoria])
   
   return (
