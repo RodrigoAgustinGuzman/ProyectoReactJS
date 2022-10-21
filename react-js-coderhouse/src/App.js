@@ -5,6 +5,7 @@ import ItemListContainer from "./Container/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./Container/ItemDetailContainer/ItemDetailContainer";
 import Cart from "./components/header/Cart/cart";
 import CartProvider from "./context/CartContext";
+import Form from "./components/header/Form/Form";
 
 const mensaje = "Bienvenidos a nuestra pagina "
 
@@ -15,9 +16,10 @@ const App = () =>{
     <NavBar/>
     <Routes>
         <Route path='/' element={<ItemListContainer greeting={mensaje}  />} />
-        <Route path='/category/:categoriaId' element={<ItemListContainer greeting={mensaje}  />} />
+        <Route path='/category/:categoriaid' element={<ItemListContainer greeting={mensaje}  />} />
         <Route path='/detail/:id' element={<ItemDetailContainer />} />
         <Route path='/cart' element= {<Cart/>} />
+        <Route path='/form' element= {<Form/>} />
     </Routes>
     </CartProvider>
     </>
