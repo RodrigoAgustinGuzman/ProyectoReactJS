@@ -13,10 +13,10 @@ const App = () =>{
   return (
     <>
     <CartProvider>
-    <NavBar/>
+    <NavBar></NavBar>
     <Routes>
         <Route path='/' element={<ItemListContainer greeting={mensaje}  />} />
-        <Route path='/category/:categoriaid' element={<ItemListContainer greeting={mensaje}  />} />
+        <Route path='/category/:IdCategoria' element={<ItemListContainer greeting={mensaje}  />} />
         <Route path='/detail/:id' element={<ItemDetailContainer />} />
         <Route path='/cart' element= {<Cart/>} />
         <Route path='/form' element= {<Form/>} />

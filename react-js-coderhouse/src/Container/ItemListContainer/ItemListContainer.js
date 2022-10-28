@@ -11,13 +11,13 @@ const ItemListContainer = ({greeting}) => {
   const [listaProductos, setListaProductos] = useState ([])
   const [loading, setLoading] = useState (true)
   
-  const { categoria } = useParams();
+  const { IdCategoria } = useParams();
 
   useEffect (()=>{
     const productsCollection = collection(db, 'productos'); //se crea la coleccion
-        const q = query(productsCollection, where('categoria', '==', categoria || null));
+        const q = query(productsCollection, where('categoria', '==', IdCategoria || null));
 
-        getDocs(categoria ? q : productsCollection)
+        getDocs(IdCategoria ? q : productsCollection)
             .then((data) => {
                 const list = data.docs.map((product) => {
                     return {
@@ -33,7 +33,7 @@ const ItemListContainer = ({greeting}) => {
             .finally(() => {
                 setLoading(false);
             });
-    }, [categoria])
+    }, [IdCategoria])
   
   return (
     <>

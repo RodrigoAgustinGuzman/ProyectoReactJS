@@ -22,7 +22,7 @@ const navbar = ({name}) => {
       <h1>Store {name}</h1>
     </div>
     <div style={styles.links}>
-      <Nav categories={categories}/>
+      <Nav categorias={categories}/>
       <Link to="/cart">
         <CartWidget />
       </Link>
