@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ItemList from '../../components/header/ItemList'
 import{ query, where, collection, getDocs } from 'firebase/firestore'
 import {db} from '../../Firebase/Config'
-import { CircularProgress } from "@mui/material";
+import CircularProgress from '@mui/material/CircularProgress';
 import { useParams } from 'react-router-dom';
 
 
@@ -10,7 +10,7 @@ const ItemListContainer = ({greeting}) => {
 
   const [listaProductos, setListaProductos] = useState ([])
   const [loading, setLoading] = useState (true)
-  
+  const [error, setError] = useState(false);
   const { IdCategoria } = useParams();
 
   useEffect (()=>{
@@ -38,10 +38,14 @@ const ItemListContainer = ({greeting}) => {
   return (
     <>
     <h1>{greeting}</h1>
-    loading ? 
+    {loading ? (
+        <CircularProgress />
+      ) : error ? (
+        <h1>Ocurrio un error</h1>
+      ) : (
     <ItemList listaProductos= {listaProductos}/>
+     )}
     </>
-  
   )
 }
 

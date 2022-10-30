@@ -2,6 +2,7 @@ import { ItemCount } from "../header/ItemCount";
 import { useCartContext } from "../../context/CartContext";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
 
 
@@ -26,7 +27,7 @@ const onAdd = (cantidad,) => {
           <p>${Producto.price}</p>
           {
             goToCart 
-            ? <Link to="/cart" > Terminar la compra </Link>
+            ? <Link to="/cart" > <Button> Terminar la compra </Button> </Link>
             : <ItemCount initial={1} stock={Producto.stock} onAdd={onAdd}/>
         
           }
