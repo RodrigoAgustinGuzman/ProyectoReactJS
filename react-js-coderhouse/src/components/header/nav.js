@@ -13,6 +13,7 @@ export const Nav = ({ categorias }) => {
 
 const styles = {
     links: {
-        padding: 10,
+        padding: 10
+
     }
 }

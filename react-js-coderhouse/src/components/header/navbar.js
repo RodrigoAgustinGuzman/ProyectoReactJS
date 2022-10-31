@@ -14,14 +14,14 @@ const navbar = ({name}) => {
   ];
 
   return (
-    <header style={styles.container}>
-    <div style={styles.branchContainer}>
+    <header>
+    <div>
       <Link to="/">
-        <img style={styles.imagen} src={logo} alt="logo" />
+        <img  src={logo} alt="logo" />
       </Link>
       <h1>Store {name}</h1>
     </div>
-    <div style={styles.links}>
+    <div className='navBar' >
       <Nav categorias={categories}/>
       <Link to="/cart">
         <CartWidget />
@@ -32,7 +32,7 @@ const navbar = ({name}) => {
 );
 };
 
-const styles = {
+/*const styles = {
 container: {
   display: "flex",
   justifyContent: "space-between",
@@ -58,6 +58,6 @@ imagen: {
   width: "30%",
 },
 };
-
+*/
 export default navbar;
  
