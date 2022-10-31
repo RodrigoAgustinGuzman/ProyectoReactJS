@@ -9,4 +9,4 @@ En este proyecto habra diferentes categorias de los distintos productos y un car
 - Material Icon (libreria css)
 - FireBase (base de datos)
 
-[pages](https://reactjs-qnalv12dv-rodrigoagustinguzman.vercel.app)
+ # [Pagina del proyecto](https://reactjs-qnalv12dv-rodrigoagustinguzman.vercel.app)
