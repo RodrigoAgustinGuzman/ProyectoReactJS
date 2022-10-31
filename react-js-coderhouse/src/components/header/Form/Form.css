@@ -1,0 +1,25 @@
+.formulario {
+    margin: 0 auto;
+    width: 300px ;
+    border-radius: 3px;
+    background-color: orange;
+    padding: 10px;
+}
+
+.labelForm {
+   padding: 5px;
+   color: rgb(6, 5, 5);
+
+}
+
+.inputForm {
+    border: 0;
+    outline: none;
+    padding: 10px;
+}
+
+.formulario button{
+    margin: 60px;
+    height: 30px;
+    width: 150px;
+}

@@ -1,0 +1,25 @@
+.totalPrice {
+    display: flex;
+    justify-content: center;
+
+}
+
+.totalPrice button {
+    margin-top: 20px;
+    height: 30px;
+    width: 200px;
+
+}
+
+.totalPrice p {
+    height: 30px;
+    margin-right: 10px;
+    padding: 10px;
+    color: red;
+}
+
+.cartVacio p {
+    display: flex;
+    justify-content: center;
+    color: red;
+}

@@ -1,5 +1,6 @@
 import { ItemCount } from "../header/ItemCount";
 import { useCartContext } from "../../context/CartContext";
+import '../ItemDetail/ItemDetail.css'
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
@@ -17,10 +18,7 @@ const onAdd = (cantidad,) => {
   }
 
   return (
-    <div>
-          <Link to="/">
-           <button>Volver</button>
-          </Link>
+    <div  className="cardDetail" >
           <p>{Producto.product}</p>
           <img src={Producto.image} alt="camisetas"/> 
           <p>{Producto.description}</p>
@@ -31,6 +29,9 @@ const onAdd = (cantidad,) => {
             : <ItemCount initial={1} stock={Producto.stock} onAdd={onAdd}/>
         
           }
+          <Link to="/">
+           <button>Volver</button>
+          </Link>
       </div>
       )
 }
